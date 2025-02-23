@@ -51,10 +51,30 @@ nick = Cat(name="Nick")
 for day in range(3650):
     if nick.alive == False:
         break
-    nick.live(day)
-    if kate.alive == False:
-        break
-    kate.live(day)
-    if bohdan.alive == False:
-        break
-    bohdan.live(day)
+
+
+
+    def divider(a, b):
+        if a < b:
+            raise ValueError('Good A')
+        if b > 100:
+            raise IndexError('Good B')
+        return a / b
+
+
+    for key in data:
+        try:
+            res = divider(key, data[key])
+            result.append(res)
+        except Exception as e:
+            print(f"Exception occurred: {type(e).__name__}: {e}")
+
+    print(result)
+
+    # nick.live(day)
+    # if kate.alive == False:
+    #     break
+    # kate.live(day)
+    # if bohdan.alive == False:
+    #     break
+    # bohdan.live(day)
